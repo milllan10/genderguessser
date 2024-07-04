@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Guesser Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #e5e7eb, #d1d5db); /* Gradient background */
+        }
+        .box {
+            background-color: #fff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+        .btn-custom {
+            background: linear-gradient(135deg, #4f46e5, #3b82f6); /* Gradient button background */
+            transition: transform 0.3s ease-in-out;
+            border: none;
+        }
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #3b82f6, #4f46e5); /* Gradient button background on hover */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex justify-center">
+    <div class="container mx-auto px-4 py-10 text-center">
+        <h1 class="text-5xl font-bold mb-5 text-gray-800 drop-shadow-lg">Gender Guesser Result</h1>
+        <div class="max-w-md mx-auto box">
+            <div class="bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md mb-6">
+                <p class="font-semibold text-lg">Predicted Gender: <strong>{{ prediction }}</strong></p>
+            </div>
+            <p class="text-gray-700 mb-6 text-lg">Thank you for using the Gender Guesser. Click the button below to make another prediction.</p>
+            <a href="/" class="btn-custom text-white font-bold py-2 px-4 rounded-lg w-full transition duration-300">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
